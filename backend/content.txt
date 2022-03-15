@@ -577,3 +577,13 @@ important commands-
 
 Q1- SHOULD WE INSTALL THE SOCKET.IO IN BOTH FRONTEND AND BACKEND TO USE IN BOTH CASE.
 Q2-IF WE WRITE TEST OR START IN SCRIPT IN PACKAGE.JSON IS THIS SAME OR NOT?
+
+
+
+arrow error in github resolved-
+git rm --cached folder_name
+git add folder_name
+git commit "......"
+git push origin main
+
+git ignore 
