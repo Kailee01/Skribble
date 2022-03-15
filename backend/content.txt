@@ -1,0 +1,579 @@
+
+
+
+
+
+
+
+
+
+
+
+
+Frontend part - React
+Adding ui to the project.
+Adding backend in it.
+First single player and then multiplayer.
+
+About Game-
+A word gets picked from the dictionary at random
+6 lives EAch round we pick the letter-
+if letter correct (letter exists in the word)
+every place the letter exists is replaced by the letter 
+ltter is incorrect -I loose live
+
+
+poc-
+
+
+first write TRD of the project-
+(Technical requirement document)
+1. limited word pool
+2. limited UI 
+3. single player
+4. fronted only
+5. No Hints
+
+
+
+
+Rects RECAP:
+1. for abstracting complex js
+2.it is doing nothing but doing same thing that is used years back .
+like create elemtn adding elem imitating the same 
+3. root=docuemt.getelemtbyid("app"");
+root.appent(docuemt.createextnode("New node")
+))
+
+transpiler-
+like typescript goes to the face with tranpilation to run js in interpreter of browser.
+it convert to js for browser.
+
+bable-is nothing but a transpiler it convert from one form of code to another form of the code
+
+some Questions-
+what is react,bable,dom,vdom,jsx,transpiler,why we call a library.
+what babel does. why jsx and html tag are same.
+
+vdom-
+in memory and dom is rendered directly in browser.
+
+jsx-
+is just imitation of actual html tags in js.
+
+why we write import react from "react"?
+when jsx is converted to the simple js code then the converted code uses React.createlement kind of things to run in browser.
+
+
+
+NOde-
+node is interpreted language.
+it can execute the code that is write in file.
+brwoser has its own js interpreter for execute the code.
+there si diff in the enviroment in whcih interpreter is running in computer and browser.
+
+Do we need node to develop react-
+Yes for transpilation and building all that we ndeed ndoe.
+
+npm build run process-
+jsx to simple html code so browswer can execute.
+
+
+
+
+
+brwoser has its own interpreter for js.
+using node we can run js without browser.
+
+BUILD step-
+jsx to js code.
+jsx to simple html.
+transpilations.
+
+Do we need Node js to devloping React .
+
+Web pack-
+is tool which runs all of the build tool like bable to convert jsx into js file.
+
+
+NVM-
+node version manager
+It enable us to keep multiple  node version in our computer.
+like if we want to use nvm version 14 for our project. nvm use 14 command is use.
+it is good practice to make nvmrc
+npm install nvm 
+
+
+work with SASS.
+ 
+sass- SASS SETUP WITH REACT 
+sass loader is load sass and covert to css.
+sass is intergrated to webpack. we can add to webpack.config
+Sass is a CSS pre-processor
+Sass is an extension to CSS
+Sass reduces repetition of CSS and therefore saves time
+sass trnaspile to css like jsx transpile to js 
+
+style loader and css loader taking sass file coverted to js code (in dist/main.js) taking theis js file and coverting to css fiel in the fly.
+
+
+            style loader css-loader
+main.scss-------------->main.js css------->render the css file on the fly within the browser.
+
+
+
+For ui Part use codePen
+
+
+
+
+node sass-
+node sass is implementation of sass that tranpile saass to css i.e implementation of preprocessor 
+
+sass loader-
+import that  load sass implementation into our webpack builder.
+These two loader is need saas loader is dependent on these two library-
+npm i css-loader
+npm i style-loader
+
+ssr and ssg websites-
+server side renndered and server side generated website.
+
+install webpack
+
+
+pure function-
+0.functional programming
+1.output will be same for the same input value.
+2.You can't never mutate global state
+
+
+
+
+System design ---->
+1.frontend 
+2. backend (LLD and HLD)
+
+
+FLOW OF ANY PROJECT-
+fronted and backend look like 
+how i will design my DB
+How i will architechture my fronted.
+How i will write API for communication
+Document the Project.
+
+
+
+
+In LLD we talk about-
+0. We call what inside our applications,our DB,
+1.requirement
+2.DB Schema 
+3.API contracts.
+
+Steps for LLD interview-
+0.List douwn clear requirement.
+like multiplyer or sigle player,worpool or as for wordpool ,leaderboard,multiple difficulty,negative marking,time limit, use histroy.
+Example -
+1.public endpoints Private endpoints.
+public endpoints-user interaction.(start game)
+private endpoints-private to app.(leaderboard)
+endpoints is api,localhost.5500/leaderboard. leaderboard is an endpoints
+2.Schema DB what all info you are going to get in fronted and what all info you are going to send backend.
+say SQL(table in well structure Schema) OR NOSQL(NOT ONLY sql in document in key value pair).
+
+
+api contract is contract between fronted and backend wehn we hit the request /leaderboard  in format what informationa and what format.
+
+
+
+In HLD -
+0. what my infrastructure look like.
+1.how my server look like.
+2.where my db going to get hosted.aws,microsoft cloud,azure cloud, google cloud.
+3.how my different piece of applications communicate.
+4. how master slave architechture look like.
+5. how my microservices look like.
+6. shoud i keep one copy of DB.what if it is lost.so we use master slave.
+
+
+   LOAD BALANCER-
+   0.it distribute traffic b/w different machine that is hosted on aws.
+   1.IS an algorithm which machine takes my request.
+   2. like requesno goes to requesno%mod No machine.
+   3. Can be used to handle lot more traffic.
+   4. it handle the applications in distribution handle.
+
+
+
+
+
+Frontend Architechture/fronted design--->
+1.fronted architechture and UI Is two different things 
+2.on what our fronted is going to build on.
+3.is this server side render applictions ar server side generated applications.
+4.where i host my image
+5.webpack config look like
+6.how build cycle will be (package)
+
+
+
+
+
+API-
+0.applications programming interface.
+1.api is the definition of a module/function/class.
+2.interface by which i can communicate with that function/module/class.
+3.formal parameter is api of the function.
+4. api can be a library like react create element is api.
+
+webapi-
+weburl 
+
+
+Restful API-
+api with the format of {...
+                        ....}
+rest is just pattern of api.
+
+i will build the web applications that will return a json of a given type to the fronted Just say I will be designing the restful api.
+
+scaffolding is the  file structure of the project that will look like
+app.js
+routes/
+squilize.
+
+
+
+Services-
+utility classes,modules & function which perform a given responsibility.
+CODE---->JUDGE
+If I want to do transactoin then their will be different services which does amout deduction,amount credit,transactoin ID etc.
+
+
+Know About SOLID (Every should have single responsibility) principles.
+
+
+
+
+CASAANDRA db -is just a db rdbms+document db.
+
+mvc-
+
+
+controller-
+only see the executio of the applications.i.e order of execution never  contain business logic.
+
+
+header-
+is the way communcaiton b/w client and server based on trust.
+
+
+
+orm
+implementing geme session service 
+previous Doubts.
+Solid principles.
+
+
+
+ORM-
+object relation mapping.
+applications need to cummunicate with DB.
+purpuse of orm is to meke communcaiton of applications with DB easy.
+a node js applications send a quesry to db then db return response to the query.
+every db have their db driver.
+it represent a table as a class in RDBMS.
+ORM CAN make complex query very easly i.e inner/outer join.
+
+main purpose of orm is to meke coomunication of aap with db easy.
+
+applications----------sql Query----------------->DB (rdbms,documet,CASAANDRA)
+             <----------id/name/lives in string--  
+
+string is sent to db driver. this db driver will convert the stirng into readable format like-  {id:,name:,.....}
+from db driver we will get json.
+
+  session.findAll()=select* from session   (table)  
+  |
+  ((((ORM))))
+  |
+  orm will take this query and send this to driver.
+  |
+  driver will respond the json{.....,....}
+  |
+  NOW orm come into picture take this json and convert it into new object of a class session.
+
+serialization
+step where we covert a local object into some representation that can be send over the internet to the client is called serialization.
+coverting class obejct to json is serialization.
+in nodejs serialization is easy becz can easly convert to json.(every thing is technicallyy a json)
+
+
+sequelize- 
+it is library
+it is a famus nodejs orm.
+it connect multiple db.
+
+
+sqlite-
+For DB
+library
+In android device we can mek db and that db is sqlite.
+
+
+
+
+
+
+
+mime types-->
+response to the client if byte its content type is (json) if array content type is html 
+we can send method in internet via .exe.
+
+
+asynch await function-
+
+
+sequelize is orm and it need sqlite3 db driver to coomunication.
+
+
+
+
+TO INTERVIEWER-
+I AM FREHSER.
+I HAVE BUILD SOME SERTAIN PROJECT BY OUR OWN.
+WHILE BUILDING THOSE PROJECT I ENGINEERED FRONTED ,BACKEND I MADE THOSE PROJECT AS A FULLSTACK.
+I DEPLOYED BY MY OWN.
+I DEPLOYED ON AWS,HEROKO.
+WHILE WRITING  THE BACKEND I MADE THE BACKEND AS THE OPERN SOURCE AND FOLLOWED ALL THE BEST PRACTICE FOR THE PRODUCTION.
+FOR MY I applications EVEN SETUP LOGGING AND ERROR RATE WAS 2-5 %.
+
+
+
+
+
+
+FRONTED-------------COMUNICATION--------------BACKEND
+Now we will make api calls to coomunication of backend and fronted
+we will use HHTP APIs to communicate them.
+brwoser provide us with a way to make the http api calls which is called XHR.
+XHR- xml http requrest.
+CORS-CROSS origin resource string.cros are 
+We will mke XHR request on the fronted. we will use Fetch(available on browswer)
+
+
+
+
+apis- it is just a definition it can be the definitio of fun,calss,module.just definition of two pieces of the program.
+http apis- Going to the ur
+
+
+
+storage mechanism for the browser
+1.cookies--->
+cookies can be set via js or by server
+2.local storage can be set by js 
+3.session storeage can be set by js.
+
+
+jwt-
+json web token
+it break down your token in three part (headers,content,signature)
+in jwt content is visible but never be change.
+
+
+
+
+
+
+
+
+
+
+
+
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+SKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLESKRIBBLE
+
+
+
+
+
+
+
+
+
+mvp-minimum viable product.
+webRTC
+
+
+web socket-
+WE create real time funnel b/w each communication party.
+more expensice and very real time.
+long polling
+we are making constantly amount of request after fix time (5,10,25 second) to fetch new information from common pool.
+less expensive and less real time.
+
+
+jwt
+is kind of unique token mechanism.
+
+
+PRD-
+
+
+
+
+
+
+
+
+canvas-
+html ka native elment hai jisko use krke we can draw drawing.
+
+
+
+
+
+what is FIGMA.
+UI/UX differnece.
+
+
+
+
+LLD OF SKRIBBLE-
+public endPoints
+
+as soon as we create one more room new socket connection is creted.
+as soon as room is created all the communication is donw with socket connection not through restful api.
+
+
+SOCKET.IO-
+is Basic library which uses the web socket protocol to commnicate the massage.
+only one http call to socket.io which return us 101 response.
+ rest all the communication is in socket.
+two way communcaiton.
+
+
+web socket-
+web socket is protocol which support constant stream of connection.
+we need web socket bcz we need real time
+
+polling-
+it uses http protocol. it is not protocol but web socket is protocol.
+
+http method-
+get
+post 
+put 
+delete
+
+
+
+
+tomcat-
+it is http server.
+ngix, apache and tomact is http server.
+
+
+why React-
+it will easy if you are comfartabel with.
+
+
+Redis-
+IN-memosry DB.
+what ever is keept in redis is kept in primary memory.
+redis keep the data in primary memory. it doest not keep data in persistece.
+speed is the biggest advantage in reids.
+it is the no sql key value db.
+
+
+
+Horizontal scaling and verical scaling->
+2*x GB (ram)
+
+
+
+
+event pipeling-
+u1-->s1
+            Redis(it brodcast the all the event to the client conencted to it.)
+u2--->s2
+
+
+socket connection-
+client grant for socket connection. like full duplex(two way communiation channle.)
+channle is establised b/w client and server.
+in http we can't get real time 
+In socket when we are not directly connected to the all client but server acess a proxy to other client first request is send to server then it brodcast to other clients.
+
+
+
+can run our front part-
+live server
+web  pack bundler
+other bundler like snopack
+
+add the dev script for sowpack in packege.json
+nodemon- keep looking on changes on js it is node pack which see the update in js. live reload the backend.
+
+cors error-
+we can't make the request from 8080 to 3000 port.
+cros side resourse share.
+
+
+
+
+npm install snowpack
+npm install nodemon
+npm run dev
+npm install socket.io 
+npm install socket.io-client
+npm install @socket.io/admin-ui  
+
+https://admin.socket.io/#/
+
+event,custome-event,room,callback,data --->all socket concept.
+
+split the terminal so we can run differnt for frontend and backaend and git push 
+
+
+
+react create -(frontend)
+npx create-react-app frontend
+npm start
+
+backend()
+npm init (package.json)
+npm install nodemon
+set script 
+
+
+important commands-
+1.cd folderName 
+2.create-react-app .
+3. react componets-
+4. mkdir folder name
+5. touch file name
+6. rm file_to_delete
+7. rm -rf folder_to_delete
+
+
+
+
+
+
+Q1- SHOULD WE INSTALL THE SOCKET.IO IN BOTH FRONTEND AND BACKEND TO USE IN BOTH CASE.
+Q2-IF WE WRITE TEST OR START IN SCRIPT IN PACKAGE.JSON IS THIS SAME OR NOT?
