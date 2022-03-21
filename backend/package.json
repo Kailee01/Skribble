@@ -4,12 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon server.js"
+    "test": "nodemon app.js"
   },
   "author": "Kailash",
   "license": "ISC",
   "dependencies": {
+    "@socket.io/admin-ui": "^0.2.0",
     "express": "^4.17.3",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.1"
   }
 }
